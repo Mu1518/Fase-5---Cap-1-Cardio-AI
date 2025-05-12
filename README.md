@@ -8,7 +8,7 @@
 
 # PROJETO - :artificial_satellite: SPRINT 3 INGREDION  
 
-<img src="https://github.com/Ioiofmanzali/FIAP_FASE_5_SPRINT_2/blob/main/assets/talhoes.jpeg" width="1980">
+![capa](https://github.com/Ioiofmanzali/Sprint3_FIAP_Grupo09/blob/main/assets/capa.jpeg)
 
 ## Grupo 22
 
