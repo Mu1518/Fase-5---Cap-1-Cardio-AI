@@ -268,7 +268,7 @@ Os dados sao utilizados para treinamento em um ou mais modelos selecionados pelo
 
 ## 💹 ESTIMATIVA DE PRODUTIVIDADE
 
-Para esta previsão, o melhor modelo modelo treinado com os dados históricos e os melhores hiperparâmetros ajustados (DecisionTreeRegressor - max_depth: None  e RMSE de 1094.79).  
+Para esta previsão, o melhor modelo modelo treinado com os dados históricos e os melhores hiperparâmetros ajustados (GradientBoosting com RMSE de 1995.68).  
 A saída deste processo consistiu em estimativas quantitativas da produtividade para um horizonte temporal futuro específico (5 anos), fornecendo insights cruciais para o planejamento estratégico e a tomada de decisões proativas dentro do cenário do desafio. A acurácia dessas previsões está intrinsecamente ligada à qualidade dos dados futuros utilizados e à capacidade do modelo de generalizar padrões aprendidos no passado para novas situações.
 
 ![prod](https://github.com/Ioiofmanzali/FIAP_FASE_5_SPRINT_2/blob/main/assets/est_prod.JPG)
