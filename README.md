@@ -160,10 +160,6 @@ A interface do usuário é organizada em diferentes páginas, acessíveis atrav�
 
 A interface utiliza componentes do Streamlit como st.markdown, st.subheader, st.write, st.dataframe, st.plotly_chart, st.download_button, st.selectbox, st.multiselect, st.number_input, st.button, st.info, st.success, st.warning, st.error, st.expander, st.balloons e st.feedback para criar uma experiência mais  interativa para o usuário.
 
- ### Video Demonstrativo da inteface Streamlit
- 
- [LINK DO VIDEO DEMONSTRATIVO](novo link a a ser feito)
-
 ## DATASETS
 
 Com exceção dos arquivos do INMET, os demais datasets não possuem valores ausentes.
