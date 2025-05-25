@@ -29,36 +29,44 @@
 
 Documentação Técnica do Projeto "CHALLENGE INGREDION - Sprint 3"
 
-![Versão 3.0.0](https://img.shields.io/badge/Vers%C3%A3o%203.0.0-gray?style=flat) 
+![Versão 2.0.0](https://img.shields.io/badge/Vers%C3%A3o%202.0.0-gray?style=flat) 
 
 Autores: Jonatas Gomes, Iolanda Manzali, Murilo Nasser, Pedro Sousa, Amanda Fragnan
 
 ## 🔍 SOBRE O PROJETO
-RESSECREVER ESSE TRECHO - COLOCAR QUE É PRA SPRINT 3 E QUE REPRESENTA UMA VERSAO MELHORADA EM RELCAO A ANTERIOR
 
-Este projeto, baseado na segunda fase do Challenge Ingredion do Curso de Inteligência Artificial da FiAP (1TIAO), tem como foco o desenvolvimento de um modelo de Inteligência Artificial para cálculo de previsão da produtividade agrícola, utilizando NDVI (Índice de Vegetação Normalizada), dados climáticos, de produtividade e custo.
-
-Os datasets utilizados no programa foram previamente tratados e limpos antes de serem carregados via APEX para a nuvem Oracle. Isso ocorreu pela natureza diversa das formatações e pela necessidade de padronização dos dados para garantir a integridade e a precisão das análises. 
-
-Os valores faltantes foram tratados com a média dos dados disponíveis, e os dados foram convertidos para o formato adequado para análise.
+Este projeto, referente a terceira fase do Challenge Ingredion do Curso de Inteligência Artificial da FiAP (1TIAO),
+            tem como foco o desenvolvimento de um modelo de Inteligência Artificial para cálculo de previsão da produtividade agrícola, utilizando NDVI
+            (Índice de Vegetação Normalizada), dados climáticos, de produtividade e custo.
             
-O projeto foi desenvolvido em Python, utilizando as bibliotecas, Streamlit, Pandas, NumPy, Scikit-learn, Plotly, dentre outras. 
+            Os datasets de NDVI, custos e produtividade não possuem valores ausentes. Os dataset do INMET utilizados no programa foram previamente tratados e limpos antes de serem carregados via APEX para a nuvem Oracle. Isso ocorreu pela natureza diversa das formatações e pela necessidade de padronização dos dados para garantir a integridade e a precisão das análises. Os valores faltantes foram tratados com a média temporal dos dados disponíveis, e os dados foram convertidos para o formato necessário para análise nessa aplicação.
+            
+            O projeto foi desenvolvido em Python, utilizando as bibliotecas Streamlit, Pandas, NumPy, Scikit-learn, Plotly, Pickle, Os, Requests, Locale e Datetime.       
 
 ** obs: todo o código desse projeto foi escrito utilizando a IDE (VSCode).
 
-### 🛠️ MELHORIAS IMPLEMENTADAS EM RELAÇÃO À VERSÃO 2.0.0
+### 🛠️ MELHORIAS IMPLEMENTADAS EM RELAÇÃO À VERSÃO 1.0.0
 
   * NOVOS DATASETS:
      - CONAB: custos de produção das culturas de Triticale, Trigo, Amendoim, Batata-inglesa, Feijão (1a safra), Tomate, Sorgo e Soja.
-     - INMET: os dados de todas as estações de 2019 a abril de 2025
+     - INMET: dados INMET das estações meterreológicas A001 (Brasilia), A020 (Pedro Afonso), A025 (Rio Verde), A042 (Barreiras), A426 (Guanambi), A839 (Passo Fundo), A843 (Dois Vizinhos), A852 (São Luiz Gonzaga), A853 (Cruz Alta), A859 (Caçador) e A721 (Dourados) 
      - SIDRA/IBGE: dados agricolas para as culturas de Triticale, Trigo, Amendoim, Batata-inglesa, Feijão (1a safra), Tomate, Sorgo e Soja.
-     - Clima: dados poligonais de clima obtidos a partir do dataset clima_5000
-     - Solo: dados poligonais de solo obtidos a partir do dataset solo_5000
-     - Unidades Territoriais: localizacao geografica (LAT/ LONG) dos municipios do território brasileiro, nome e sua altitude em relacao ao nivel do mar.   
 
+
+    * MODULARIZAÇÃO DA APLICAÇÃO:
+   
+    A nova estrutura da aplicação encontrase modularizada da seguinte forma:
+                - app.py: script inicial para a aplicação, arquivo principal que direciona as outras páginas.
+                - app_carga.py: permite o upload de arquivos CSV através de uma interface Streamlit, validando e enviando dados agrícolas (NDVI, produtividade e meteorológicos) para uma API Oracle. Ele faz o pré-processamento dos dados, exibe uma prévia e realiza a carga em lote com tratamento de erros e feedback ao usuário.
+                - app_dados.py: realiza a conexão com uma API Oracle REST para coletar dados agrícolas, como NDVI, produtividade, dados meteorológicos e custos. Ele faz o tratamento das requisições, lida com paginação automática e retorna os dados organizados em DataFrames para análise no Streamlit.
+                - app_links.py: exibe uma página no Streamlit com links úteis para acesso a bases de dados agrícolas e meteorológicos, como IBGE, INMET, CONAB e SATVEG. Ele serve como um atalho rápido para fontes de dados essenciais no contexto do projeto.
+                - app_produtividade.py: realiza a estimativa de produtividade agrícola utilizando um modelo de machine learning treinado, acessível por meio de uma interface Streamlit. Ele permite ao usuário selecionar localidade, cultura, ano, mês e área plantada, realizando a previsão da produtividade e calculando a produção total estimada.
+                - app_sobre.py: apresenta informações sobre o projeto de previsão de produtividade agrícola, desenvolvido no Challenge Ingredion da FIAP, explicando os objetivos, metodologia, tratamento dos dados e as bibliotecas utilizadas. Também apresenta os membros da equipe e os próximos passos planejados para evolução e expansão do projeto.
+                - app_treinamento.py: permite treinar diversos modelos de machine learning supervisionados para previsão de produtividade agrícola, utilizando dados carregados da base Oracle. O usuário seleciona os modelos desejados, e o sistema realiza ajuste de hiperparâmetros, avalia o desempenho e salva o melhor modelo para ser utilizado nas previsões futuras.
+    
 ### ❗ PRÉ-REQUISITOS 
 
-* Ambiente de desenvolvimento compatível com Python,  como VSCode ou PyCharm.
+* Ambiente de desenvolvimento compatível com Python, como VSCode ou PyCharm.
 
 * Versão do Python superior a 3.9 instalado no seu sistema operacional (Windows, macOS ou Linux). Recomendamos a versão mais recente estável.
 
@@ -76,11 +84,9 @@ Maiores informações sobre a instalação e uso dessas linguagens de Programaç
 
 3. Oracle: https://www.oracle.com.br
 
-4. Geopandas: https://geopandas.org/en/stable/docs.html
-
 ## 🛠️ TECNOLOGIAS UTILIZADAS
 
-![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white) &nbsp; ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) &nbsp; ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white) 	![GeoPandas](https://img.shields.io/badge/Geopandas-%23150458.svg?style=for-the-badge&logo=Geopandas&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white) &nbsp; ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) &nbsp; ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white) 	
 
 
 ### 1. ORACLE
@@ -145,13 +151,13 @@ A interface do usuário é organizada em diferentes páginas, acessíveis atrav�
 
 * **Treinamento de Modelos**: Permite ao usuário selecionar e treinar diferentes modelos de regressão supervisionada utilizando os dados de produtividade. Exibe os resultados do treinamento e salva os modelos treinados.
 
-* **Previsão de Produtividade**: Permite ao usuário inserir parâmetros (localidade, cultura, ano e mês de plantio, área plantada) e obter uma previsão da produtividade utilizando o melhor modelo treinado.
+* **Estimativa de Produtividade**: Permite ao usuário inserir parâmetros (localidade, cultura, ano e mês de plantio, área plantada) e obter uma previsão da produtividade utilizando o melhor modelo treinado.
 
 A interface utiliza componentes do Streamlit como st.markdown, st.subheader, st.write, st.dataframe, st.plotly_chart, st.download_button, st.selectbox, st.multiselect, st.number_input, st.button, st.info, st.success, st.warning, st.error, st.expander, st.balloons e st.feedback para criar uma experiência mais  interativa para o usuário.
 
  ### Video Demonstrativo da inteface Streamlit
  
- [LINK DO VIDEO DEMONSTRATIVO](https://youtu.be/joQEFZE4JyI)
+ [LINK DO VIDEO DEMONSTRATIVO](novo link a a ser feito)
 
 ## DATASETS
 
@@ -163,10 +169,11 @@ Os datasets IMNET foram processados conforme o descrito a seguir:
   - Preenchimento de valores ausentes: Valores ausentes, representados por '-9999', '-9999.0', 'NA' ou '', substituídos pela média temporal da mesma hora e dia de outros anos. 
   - Repetição do código WMO (código especifico da estação metereolólgica) em todas as linhas, garantindo a uniformidade dessa informação.
   - Salvamento dos arquivos processados sem sobrescreve os originais
+ A001 (Brasilia), A020 (Pedro Afonso), A025 (Rio Verde), A042 (Barreiras), A426 (Guanambi), A839 (Passo Fundo), A843 (Dois Vizinhos), A852 (São Luiz Gonzaga), A853 (Cruz Alta), A859 (Caçador) e A721 (Dourados). 
+
 
 ### NDVI
-  - selecionados talhões aleatórios dos municipios de  Ajuricaba, Barreiras, Borborema, Brasilia, Bueno Brandão, Caçador, campo Mourão, Capanema, Cascavel, Coimbra, Contenda, Cruz Alta, Dois Vizinhos, Dourados, Grandes Rios, 
-Guanambi, Guarapuava, Itapeva, Jaboticabal, Passo Fundo, Pedro Afonso, Ponta Grossa, Rio Verde, Santa Maria do Herval, São Gotardo, São José de Ubá e Sorriso. 
+  - selecionados talhões aleatórios dos municipios de  Barreiras, Brasilia, Caçador, Cruz Alta, Dois Vizinhos, Dourados, Guanambi, Passo Fundo, Pedro Afonso, Rio Verde e Sorriso. 
 Os criterios selecionados no site Satveg:
             * Índice: NDVI
             * Satélite: Terra e Aqua
@@ -174,9 +181,6 @@ Os criterios selecionados no site Satveg:
             * Pré-filtragem: NoData / Nuvem
             * Filtros: SG4
     Obs: o QA neve foi selecionado para os estados da região Sul do Brasil.
-
-### CLIMA, SOLO E MUNICIPIOS (IBGE)
-  - Arquivos  shp tratados utilizando geopandas e python para extrair os dados para cada coordenada geográfica e salvos em csv. Na pasta docs estãos os arquivos .csv e na pasta docs os progrma em Python utilizados para extração dos dados. 
 
 ## ➡️ ARQUITETURA DO PROGRAMA
 
@@ -204,7 +208,7 @@ Resumo geral da arquitetura do programa:
 
 * Treinamento de Modelos: O usuário pode selecionar diferentes modelos de regressão supervisionada (Regressão Linear, SVR, Random Forest, Gradient Boosting) para serem treinados com os dados de produtividade. A biblioteca GridSearchCV é utilizada para encontrar os melhores hiperparâmetros para cada modelo através de validação cruzada. Os modelos treinados e seus respectivos resultados são salvos em arquivos .pkl no diretório modelos_treinados. O melhor modelo treinado (com menor Root Mean Squared Error - RMSE) também é identificado e salvo.
 
-* Previsão de Produtividade: Permite ao usuário inserir informações sobre a localidade, cultura, ano e mês de plantio, e área plantada. Utiliza o melhor modelo treinado para prever a produtividade para as condições especificadas.
+* Estimativa de Produtividade: Permite ao usuário inserir informações sobre a localidade, cultura, ano e mês de plantio, e área plantada. Utiliza o melhor modelo treinado para prever a produtividade para as condições especificadas.
 
 * Persistência de Modelos: Os modelos treinados são salvos localmente utilizando a biblioteca pickle, permitindo que sejam reutilizados sem a necessidade de retreinamento a cada execução da aplicação.
   
@@ -302,61 +306,7 @@ O projeto utiliza os modelos com o objetivo de encontrar a combinação que ofer
 
 Os modelos implementados são:
 
-1. Linear Regression
-
-    Hiperparâmetros: não se aplica
-
-2. Support Vector Regression (SVR)
-
-    Hiperparâmetros:
-      * C: 0.1, 1 e 10 (valores menores de C permitem maior tolerância a erros - maior viése e menor variância).
-      * Kernels: 'rbf', 'linear' e 'poly' 
-
-3. Random Forest Regressor (RandomForest)
-
-    Hiperparâmetros:
-      * n_estimators: 100 a 200 
-      * max_depth: None a 10 
-      * min_samples_split: 2 e 5 
-
-4. Gradient Boosting Regressor
-
-    Hiperparâmetros:
-      * n_estimators: 100 e 200.
-      * learning_rate: 0.01 e 0.1
-      * max_depth: 3 e 5
-
-5. Ridge
-
-    Hiperparâmetros: 
-      * alpha: 0.1, 1.0, 10.0
-
-6. Lasso
-
-    Hiperparâmtros:
-      * alpha: 0.1, 1.0, 10.0
-
-7. ElasticNet
-  
-    Hiperparâmetros: 
-      * alpha: 0.1, 1.0, 10.0
-      * L1_ratio: 0.2, 0.5, 0.8
-
-8. DecisionTreeRegressor
-
-    Hiperparâmetros: 
-      * max_depth: None, 5, 10
-
-9. KNeighborsRegressor
-
-    Hiperparâmetros: 
-      * n_neighbors: 3, 5, 7
-
-10. AdaBoostRegressor
-
-    Hiperparâmetros
-      * n_estimators': 50, 100
-      * learning_rate: 0.01, 0.1
+![modelos]()
 
 Método selecionado para selecionar o 'melhor modelo' com os 'melhores hiperparâmetros': GridSearchCV
 
