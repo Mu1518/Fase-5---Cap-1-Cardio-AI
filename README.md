@@ -180,17 +180,18 @@ Os datasets IMNET foram processados conforme o descrito a seguir:
   - selecionados talhões aleatórios dos municipios de  Barreiras, Brasilia, Caçador, Cruz Alta, Dois Vizinhos, Dourados, Guanambi, Passo Fundo, Pedro Afonso, Rio Verde e Sorriso.
     
 Os criterios selecionados no site Satveg:
-            * Índice: NDVI
+
+ * Índice: NDVI
     
-            * Satélite: Terra e Aqua
+ * Satélite: Terra e Aqua
     
-            * QA: Marginal / Nuvem / Neve
+ * QA: Marginal / Nuvem / Neve
     
-            * Pré-filtragem: NoData / Nuvem
+ * Pré-filtragem: NoData / Nuvem
     
-            * Filtros: SG4
+ * Filtros: SG4
     
-    Obs: o QA neve foi selecionado para os estados da região Sul do Brasil.
+ Obs: o QA neve foi selecionado para os estados da região Sul do Brasil.
 
 ## ➡️ ARQUITETURA DO PROGRAMA
 
