@@ -26,7 +26,7 @@ def treinar_modelos_supervisionados(X, y, modelos_selecionados):
 
     modelos = {
         'LinearRegression': (LinearRegression(), {}),
-        'SVR': (SVR(), {'C': [0.1, 1, 10], 'kernel': ['rbf', 'linear', 'poly']}),
+        'SVR': (SVR(), {'C': [1], 'kernel': ['rbf', 'linear']}),  # Reduced parameters
         'RandomForest': (RandomForestRegressor(), {
             'n_estimators': [100, 200],
             'max_depth': [None, 10],
@@ -50,9 +50,11 @@ def treinar_modelos_supervisionados(X, y, modelos_selecionados):
         modelo, params = modelos[nome]
         try:
             with st.spinner(f"Treinando {nome}..."):
+                # Set n_jobs=1 specifically for SVR
+                n_jobs = 1 if nome == 'SVR' else -1
                 grid = GridSearchCV(modelo, params, cv=5,
                                     scoring='neg_mean_squared_error',
-                                    n_jobs=-1, verbose=0)
+                                    n_jobs=n_jobs, verbose=0)
                 grid.fit(X_train, y_train)
                 y_pred = grid.predict(X_test)
                 score = np.sqrt(mean_squared_error(y_test, y_pred))
