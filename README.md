@@ -36,12 +36,6 @@ Autores: Jonatas Gomes, Iolanda Manzali, Murilo Nasser, Pedro Sousa, Amanda Frag
 ## 🔍 SOBRE O PROJETO
 Bem-vindos ao Sprint 1 do Challenge realizado em parceria com a Youvisa.
 
-V1----
-
-Nesta etapa, será proposta uma solução para o problema, juntamente com a estruturação do projeto, contemplando a seleção das tecnologias a serem empregadas e o mapeamento dos fluxos de dados.
-
-V2-------
-
 A **YOUVISA**, empresa especializada na emissão de vistos e passaportes, enfrenta desafios de **ineficiência operacional** devido ao alto volume de consultas repetitivas, **atendimento fragmentado entre diferentes canais** e **dificuldade na gestão de documentos enviados por clientes**.
 
 Para resolver esse cenário, o grupo desenvolveu o **VistoBot Multi-Channel** — uma **plataforma inteligente de atendimento e automação** que combina **chatbots multicanais**, **Processamento de Linguagem Natural (NLP)** e **Automação Robótica de Processos (RPA)**.
