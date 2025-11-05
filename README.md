@@ -42,7 +42,7 @@ Nesta etapa, será proposta uma solução para o problema, juntamente com a estr
 Este repositório tem como finalidade documentar e armazenar todo o trabalho desenvolvido ao longo do Sprint 1.   
 
 
-## ➡️ ARQUITETURA DA SOLUÇÃO
+## ➡️ ARQUITETURA DA SOLUÇÃO - Esprint 1 
 
 ## 📁 Estrutura das Pastas
 
