@@ -70,6 +70,27 @@ Este repositório tem como finalidade documentar e armazenar todo o trabalho des
 
 ## 📣 PRÓXIMOS PASSOS 
 
+Com a arquitetura definida e a documentação concluída, o próximo ciclo do projeto concentra-se na **implementação prática e validação técnica** do VistoBot Multi-Channel.  
+As atividades estão organizadas em quatro frentes principais:
+
+### 🧠 1. Inteligência e Automação
+- Implementar o **chatbot no Telegram** com fluxos básicos de atendimento.  
+- Integrar o módulo de **NLP (spaCy/NLTK)** para identificar intenções e entidades.  
+- Desenvolver o pipeline de **OCR (Tesseract)** para validação automática de documentos enviados pelos usuários.
+
+### ☁️ 2. Infraestrutura e Integração
+- Conectar o backend em **Python (FastAPI)** ao **Oracle APEX** para persistência e gestão segura de dados.  
+- Configurar autenticação e logs centralizados para rastrear interações e desempenho.  
+
+### 🤝 3. Atendimento Humano
+- Implementar o módulo de **transbordo inteligente**, encaminhando casos complexos com contexto completo ao agente humano.  
+- Criar uma interface simples para registro, acompanhamento e fechamento de tickets.  
+
+### 🔍 4. Testes e Monitoramento
+- Executar testes de desempenho e precisão do NLP.  
+- Monitorar métricas de uso, como tempo médio de resposta, taxa de resolução automática e volume de transbordos.  
+
+Essas entregas consolidarão a evolução do projeto da fase conceitual para um **protótipo funcional**, validando na prática o uso de **IA e automação** no atendimento da YOUVISA.
             
 
 ##  :octocat: CONTRIBUIÇÕES AO PROJETO
