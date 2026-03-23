@@ -49,17 +49,17 @@ Desenvolver um Assistente Cardiológico Inteligente capaz de:
 
 ## 🧠 Tecnologias Utilizadas
 
-Python
-Flask
-IBM Watson Assistant
-NLP
-HTML
-CSS
-JavaScript
-IA Generativa
-RPA
-Banco de dados relacional
-Banco de dados não relacional
+ - Python
+ - Flask
+ - IBM Watson Assistant
+ - NLP
+ - HTML
+ - CSS
+ - JavaScript
+ - IA Generativa
+ - RPA
+ - Banco de dados relacional
+ - Banco de dados não relacional
 
 ## 🧩 ARQUITETURA DA SOLUÇÃO
 
@@ -85,6 +85,13 @@ Gerar resposta estruturada em JSON
 - <b>README.md</b>: guia e explicação geral sobre o projeto
 
 ## ▶️ Como Executar o Projeto
+
+# 🎥 Vídeo de Demonstração
+
+Confira abaixo a demonstração do funcionamento do CardioAI:
+
+[![Assistir vídeo]
+
 
 ## 🗃 Histórico de lançamentos
 
