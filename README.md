@@ -179,19 +179,19 @@ Gerar respostas em formato JSON estruturado
 
 ## ▶️ Como Executar o Projeto
 
-# Clonar repositório
+- Clonar repositório
 git clone <URL_DO_REPOSITORIO>
 cd CardioAI
 
-# (Opcional) Criar ambiente virtual
+- (Opcional) Criar ambiente virtual
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 
-# Instalar dependências
+- Instalar dependências
 pip install flask ibm-watson
 
-# Executar
+- Executar
 python chatbot.py
 
 # 🎥 Vídeo de Demonstração
