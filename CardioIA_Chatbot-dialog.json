@@ -1,0 +1,859 @@
+{
+  "intents": [
+    {
+      "intent": "colesterol_triglicerideos",
+      "examples": [
+        {
+          "text": "Como reduzir o colesterol?"
+        },
+        {
+          "text": "Meu exame deu colesterol ruim alto, e agora?"
+        },
+        {
+          "text": "O que significa colesterol alto?"
+        },
+        {
+          "text": "Quais alimentos ajudam a controlar o colesterol?"
+        },
+        {
+          "text": "Triglicerídeos altos são perigosos?"
+        }
+      ],
+      "description": "Usuário quer entender sobre níveis de colesterol e triglicerídeos, seus impactos na saúde do coração e formas de controle."
+    },
+    {
+      "intent": "duvidas_pressao_arterial",
+      "examples": [
+        {
+          "text": "Como controlar a pressão arterial?"
+        },
+        {
+          "text": "Minha pressão está 14 por 9, isso é alto?"
+        },
+        {
+          "text": "O que causa pressão alta?"
+        },
+        {
+          "text": "O que significa pressão 12 por 8?"
+        },
+        {
+          "text": "Pressão baixa é perigosa?"
+        },
+        {
+          "text": "Qual é a pressão arterial normal?"
+        }
+      ],
+      "description": "Usuário faz perguntas sobre pressão arterial, pressão alta ou pressão baixa e seus impactos na saúde cardiovascular."
+    },
+    {
+      "intent": "encerramento_conversa",
+      "examples": [
+        {
+          "text": "Até mais"
+        },
+        {
+          "text": "Era isso, obrigado"
+        },
+        {
+          "text": "Muito obrigado"
+        },
+        {
+          "text": "Obrigado pela ajuda"
+        },
+        {
+          "text": "Tchau"
+        },
+        {
+          "text": "Valeu pela explicação"
+        }
+      ],
+      "description": "Usuário finaliza a conversa ou agradece o atendimento do assistente."
+    },
+    {
+      "intent": "explicacao_diagnostico_cardiaco",
+      "examples": [
+        {
+          "text": "O que acontece quando o coração não funciona bem?"
+        },
+        {
+          "text": "O que é infarto?"
+        },
+        {
+          "text": "O que é insuficiência cardíaca?"
+        },
+        {
+          "text": "O que quer dizer sopro no coração?"
+        },
+        {
+          "text": "O que significa arritmia cardíaca?"
+        },
+        {
+          "text": "O que significa doença cardíaca?"
+        }
+      ],
+      "description": "Usuário deseja entender um diagnóstico cardiológico ou condição relacionada ao coração em linguagem simples."
+    },
+    {
+      "intent": "frequencia_cardiaca",
+      "examples": [
+        {
+          "text": "Como medir a frequência cardíaca corretamente?"
+        },
+        {
+          "text": "Frequência baixa é um problema?"
+        },
+        {
+          "text": "Meu coração está batendo rápido, isso é perigoso?"
+        },
+        {
+          "text": "O que significa batimento irregular?"
+        },
+        {
+          "text": "Qual é a frequência cardíaca normal?"
+        }
+      ],
+      "description": "Usuário quer entender sobre frequência cardíaca, batimentos por minuto e sinais de alerta."
+    },
+    {
+      "intent": "habitos_saudaveis_coracao",
+      "examples": [
+        {
+          "text": "Caminhada faz bem para o coração?"
+        },
+        {
+          "text": "Como melhorar minha saúde cardiovascular?"
+        },
+        {
+          "text": "Exercício físico ajuda o coração?"
+        },
+        {
+          "text": "O que devo comer para cuidar do coração?"
+        },
+        {
+          "text": "O que evitar para manter o coração saudável?"
+        },
+        {
+          "text": "Qual alimentação é boa para o coração?"
+        }
+      ],
+      "description": "Usuário busca informações sobre alimentação, exercícios e hábitos que ajudam a manter o coração saudável."
+    },
+    {
+      "intent": "historico_familiar_risco",
+      "examples": [
+        {
+          "text": "Como reduzir o risco se minha família tem problemas cardíacos?"
+        },
+        {
+          "text": "Histórico familiar importa para doenças do coração?"
+        },
+        {
+          "text": "Meu avô tinha insuficiência cardíaca, devo me preocupar?"
+        },
+        {
+          "text": "Meu pai teve infarto, isso aumenta meu risco?"
+        },
+        {
+          "text": "Ter familiares com pressão alta é preocupante?"
+        }
+      ],
+      "description": "Usuário quer entender como o histórico familiar influencia o risco de doenças cardíacas."
+    },
+    {
+      "intent": "informacoes_medicamentos_cardiacos",
+      "examples": [
+        {
+          "text": "Medicamento para coração tem efeitos colaterais?"
+        },
+        {
+          "text": "O que fazem os medicamentos para o coração?"
+        },
+        {
+          "text": "Para que serve o remédio para pressão alta?"
+        },
+        {
+          "text": "Para que serve remédio de pressão?"
+        },
+        {
+          "text": "Quem tem problema no coração precisa tomar remédio sempre?"
+        },
+        {
+          "text": "Remédio para pressão precisa tomar todo dia?"
+        }
+      ],
+      "description": "Usuário pergunta sobre medicamentos utilizados em tratamentos cardiovasculares e suas funções gerais."
+    },
+    {
+      "intent": "orientacao_emergencia_cardiaca",
+      "examples": [
+        {
+          "text": "Acho que estou tendo um infarto"
+        },
+        {
+          "text": "Estou com falta de ar e dor no peito"
+        },
+        {
+          "text": "Estou com muita dor no peito agora"
+        },
+        {
+          "text": "Meu coração está batendo muito estranho"
+        },
+        {
+          "text": "Meu peito está apertando muito"
+        },
+        {
+          "text": "O que fazer em caso de infarto?"
+        }
+      ],
+      "description": "Usuário relata sintomas que podem indicar emergência cardíaca e busca orientação imediata."
+    },
+    {
+      "intent": "prevencao_doencas_cardiacas",
+      "examples": [
+        {
+          "text": "Como cuidar melhor da saúde do coração?"
+        },
+        {
+          "text": "Como evitar doenças do coração?"
+        },
+        {
+          "text": "Exercício ajuda o coração?"
+        },
+        {
+          "text": "O que faz bem para o coração?"
+        },
+        {
+          "text": "O que fazer para ter um coração saudável?"
+        },
+        {
+          "text": "Quais hábitos ajudam a prevenir problemas cardíacos?"
+        }
+      ],
+      "description": "Usuário busca orientações sobre hábitos saudáveis, alimentação e atividades que ajudam a prevenir doenças cardiovasculares."
+    },
+    {
+      "intent": "saudacao_inicial",
+      "examples": [
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Oi, tudo bem?"
+        },
+        {
+          "text": "Oi, você pode me ajudar?"
+        },
+        {
+          "text": "Olá?"
+        },
+        {
+          "text": "Olá assistente"
+        }
+      ],
+      "description": "Usuário inicia a conversa com uma saudação ou pergunta geral sobre o assistente cardiológico."
+    },
+    {
+      "intent": "sintomas_cardiacos",
+      "examples": [
+        {
+          "text": "Dor no lado esquerdo do peito é normal?"
+        },
+        {
+          "text": "Estou sentindo dor no peito, pode ser problema no coração?"
+        },
+        {
+          "text": "Falta de ar pode ser sinal de problema cardíaco?"
+        },
+        {
+          "text": "Meu coração está batendo muito rápido"
+        },
+        {
+          "text": "O que pode causar batimento irregular do coração?"
+        },
+        {
+          "text": "Palpitação no coração é perigoso?"
+        },
+        {
+          "text": "Tontura pode ter relação com o coração?"
+        }
+      ],
+      "description": "Usuário relata ou pergunta sobre sintomas relacionados ao coração, como dor no peito, falta de ar, palpitações ou tontura."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "pressao_arterial",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "10 por 6",
+          "synonyms": [
+            "10/6"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "10 por 7",
+          "synonyms": [
+            "10/7"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "10 por 8",
+          "synonyms": [
+            "10/8"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "11 por 7",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "11 por 8",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "12 por 7",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "12 por 8",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "12 por 9",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "13 por 8",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "13 por 9",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "14 por 8",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "14 por 9",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "15 por 10",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "15 por 9",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "16 por 10",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "16 por 11",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "17 por 11",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "17 por 12",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "18 por 12",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "18 por 13",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "9 por 6",
+          "synonyms": [
+            "9/6"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "9 por 7",
+          "synonyms": [
+            "9/7"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "9 por 8",
+          "synonyms": [
+            "9/8"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_2_1773669394865",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "habitos_saudaveis_coracao",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "🥗 Manter uma alimentação equilibrada, com preferência por alimentos naturais, frutas e verduras.\n🚶 Praticar atividades físicas regularmente, respeitando os limites do seu corpo e, se possível, com orientação profissional.\n😴 Ter boas horas de sono, mantendo uma rotina de descanso adequada.\n🚭 Evitar o cigarro, pois ele aumenta significativamente o risco de doenças do coração.\n🧘 Controlar o estresse, buscando momentos de relaxamento e bem-estar no dia a dia.\n\n❤️ Esses hábitos ajudam a cuidar da saúde do coração e contribuem para uma melhor saúde cardiovascular ao longo da vida.\n\nℹ️ Importante: Este assistente tem como objetivo auxiliar no entendimento de informações de saúde e não substitui a orientação de um profissional da área."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#habitos_saudaveis_coracao",
+      "dialog_node": "node_10_1773679240223",
+      "previous_sibling": "node_6_1773679104356"
+    },
+    {
+      "type": "standard",
+      "title": "historico_familiar_risco",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O histórico familiar pode aumentar o risco de doenças cardíacas, mas não significa que você terá necessariamente o mesmo problema.\n\nManter hábitos saudáveis, realizar exames regulares e acompanhar pressão arterial e colesterol ajuda a reduzir o risco, mesmo quando há histórico familiar.\n\nComo assistente de saúde, posso fornecer informações e orientações educativas, mas não substituo a avaliação médica. Seu profissional de saúde é quem pode acompanhar seus exames e indicar cuidados personalizados."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#historico_familiar_risco",
+      "dialog_node": "node_10_1773708667759",
+      "previous_sibling": "node_7_1773708017858"
+    },
+    {
+      "type": "standard",
+      "title": "sintomas_cardiacos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alguns sintomas podem estar associados a problemas cardíacos, mas também podem ter outras causas. Entre os sinais que às vezes aparecem em situações relacionadas ao coração estão:\n\ndor, pressão ou aperto no peito\n\nfalta de ar ou dificuldade para respirar\n\npalpitações (sensação de batimentos acelerados, fortes ou irregulares)\n\ntontura ou episódios de desmaio\n\ncansaço excessivo ou fora do habitual\n\n⚠️ Atenção: esses sintomas não significam necessariamente um problema cardíaco, mas se eles forem intensos, surgirem de repente, piorarem rapidamente ou vierem acompanhados de outros sinais preocupantes, é importante procurar atendimento médico ou um serviço de emergência para uma avaliação adequada."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#sintomas_cardiacos",
+      "dialog_node": "node_1_1773669712043",
+      "previous_sibling": "node_7_1773669984066"
+    },
+    {
+      "type": "standard",
+      "title": "duvida_especifica_pressao_arterial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uma pressão nessa faixa pode estar abaixo ou próxima do limite inferior da média para muitos adultos. Algumas pessoas naturalmente apresentam valores mais baixos sem que isso represente necessariamente um problema.\n\nNo entanto, se esses valores vierem acompanhados de sintomas como tontura, fraqueza, visão turva ou desmaio, é importante procurar orientação de um profissional de saúde.\n\n⚠️ Esta informação é apenas educativa e não substitui a avaliação de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@pressao_arterial:(9 por 6) ||  @pressao_arterial:(9 por 7) || @pressao_arterial:(9 por 8)",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1773670566149",
+      "previous_sibling": "node_3_1773671874945"
+    },
+    {
+      "type": "standard",
+      "title": "duvida_especifica_pressao_arterial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uma pressão nessa faixa geralmente é considerada dentro de valores comuns para muitas pessoas, podendo variar de acordo com cada organismo.\n\nSe não houver sintomas, normalmente não representa um problema. Ainda assim, acompanhar a pressão regularmente e manter hábitos saudáveis é importante para o cuidado com a saúde.\n\n⚠️ Esta informação é apenas educativa e não substitui a avaliação de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@pressao_arterial:(10 por 6) ||    @pressao_arterial:(10 por 7) || @pressao_arterial:(10 por 8)",
+      "dialog_node": "node_1_1773670935259",
+      "previous_sibling": "node_1_1773670566149"
+    },
+    {
+      "type": "standard",
+      "title": "saudacao_inicial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! 👋\nSou um assistente cardiológico virtual. Posso ajudar você a entender melhor informações sobre saúde do coração, sintomas, exames e prevenção de doenças cardíacas.\n\nComo posso ajudar você hoje?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#saudacao_inicial",
+      "dialog_node": "node_2_1773669394865",
+      "previous_sibling": "node_1_1773669712043"
+    },
+    {
+      "type": "standard",
+      "title": "duvida_especifica_pressao_arterial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uma pressão nessa faixa geralmente é considerada dentro de valores saudáveis para muitos adultos.\n\nManter acompanhamento regular da pressão e hábitos saudáveis, como alimentação equilibrada e atividade física, pode ajudar a manter esses níveis adequados.\n\n⚠️ Esta informação é apenas educativa e não substitui a avaliação de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@pressao_arterial:(11 por 7) ||       @pressao_arterial:(11 por 8) ||    @pressao_arterial:(12 por 7) || @pressao_arterial:(12 por 8)",
+      "dialog_node": "node_2_1773670993917",
+      "previous_sibling": "node_1_1773670935259"
+    },
+    {
+      "type": "standard",
+      "title": "duvida_especifica_pressao_arterial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uma pressão nessa faixa pode estar levemente acima da média considerada ideal para muitos adultos. Acompanhar a pressão regularmente pode ajudar a identificar se esses valores aparecem com frequência.\n\nManter hábitos saudáveis, como alimentação equilibrada, atividade física e controle do estresse, também pode contribuir para o cuidado com a pressão arterial.\n\n⚠️ Esta informação é apenas educativa e não substitui a avaliação de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@pressao_arterial:(13 por 8) || @pressao_arterial:(13 por 9) ||     @pressao_arterial:(12 por 9)",
+      "dialog_node": "node_3_1773671304189",
+      "previous_sibling": "node_2_1773670993917"
+    },
+    {
+      "type": "standard",
+      "title": "prevencao_doencas_cardiacas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A prevenção de doenças cardíacas envolve alguns hábitos importantes no dia a dia:\n\n❤️ Manter uma alimentação equilibrada, com mais frutas, verduras e alimentos naturais.\n🏃 Praticar atividade física regularmente, conforme orientação de um profissional.\n🚭 Evitar o consumo de cigarro, pois ele aumenta o risco de problemas cardiovasculares.\n🧂 Reduzir o consumo de sal e alimentos ultraprocessados.\n😴 Dormir bem e manter uma rotina de descanso adequada.\n🩺 Realizar acompanhamento médico regularmente, especialmente para monitorar pressão arterial, colesterol e outros fatores de risco.\n\nEsses cuidados ajudam a manter o coração saudável e podem reduzir significativamente o risco de doenças cardiovasculares.\n\n⚠️ Importante: Este assistente tem como objetivo auxiliar no entendimento de informações de saúde, oferecendo orientações educativas. Ele não substitui a avaliação ou o diagnóstico de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#prevencao_doencas_cardiacas",
+      "dialog_node": "node_3_1773671874945",
+      "previous_sibling": "node_6_1773677555289"
+    },
+    {
+      "type": "standard",
+      "title": "duvida_especifica_pressao_arterial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uma pressão nessa faixa é considerada acima da média para muitos adultos e pode indicar pressão arterial elevada, principalmente se esses valores aparecerem com frequência.\n\nNesses casos, é importante acompanhar a pressão regularmente e buscar orientação de um profissional de saúde para uma avaliação adequada.\n\n⚠️ Esta informação é apenas educativa e não substitui a avaliação de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@pressao_arterial:(14 por 8) ||     @pressao_arterial:(14 por 9) ||   @pressao_arterial:(15 por 9) || @pressao_arterial:(15 por 10)",
+      "dialog_node": "node_4_1773671395041",
+      "previous_sibling": "node_3_1773671304189"
+    },
+    {
+      "type": "standard",
+      "title": "duvida_especifica_pressao_arterial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uma pressão nessa faixa é considerada alta e está acima da média para muitos adultos. Valores assim podem indicar pressão arterial elevada, principalmente se aparecerem de forma frequente.\n\nÉ importante procurar orientação de um profissional de saúde e acompanhar a pressão regularmente para uma avaliação adequada.\n\n⚠️ Esta informação é apenas educativa e não substitui a avaliação de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@pressao_arterial:(16 por 10) ||     @pressao_arterial:(16 por 11) ||    @pressao_arterial:(17 por 11)",
+      "dialog_node": "node_5_1773671491089",
+      "previous_sibling": "node_4_1773671395041"
+    },
+    {
+      "type": "standard",
+      "title": "duvida_especifica_pressao_arterial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uma pressão nessa faixa é considerada muito alta e pode representar uma situação de risco. Valores assim exigem atenção médica e avaliação o quanto antes, especialmente se vierem acompanhados de sintomas como dor no peito, falta de ar, tontura ou mal-estar.\n\n⚠️ Esta informação é apenas educativa e não substitui a avaliação de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@pressao_arterial:(18 por 12) || @pressao_arterial:(18 por 13) ||    @pressao_arterial:(17 por 12)",
+      "dialog_node": "node_6_1773671589417",
+      "previous_sibling": "node_5_1773671491089"
+    },
+    {
+      "type": "standard",
+      "title": "explicacao_diagnostico_cardiaco",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alguns diagnósticos relacionados ao coração podem parecer difíceis de entender, mas geralmente indicam alterações no funcionamento do coração ou na circulação do sangue.\n\nVeja alguns exemplos:\n\n❤️ Arritmia: acontece quando os batimentos cardíacos ficam irregulares, muito rápidos ou muito lentos.\n❤️ Infarto: ocorre quando o fluxo de sangue para uma parte do coração é bloqueado, podendo causar danos ao músculo cardíaco.\n❤️ Insuficiência cardíaca: acontece quando o coração não consegue bombear sangue de forma eficiente para o resto do corpo.\n\n🩺 Um médico cardiologista é o profissional mais indicado para avaliar exames, explicar o diagnóstico com precisão e indicar o tratamento adequado.\n\n⚠️ Importante: Este assistente tem como objetivo ajudar no entendimento de informações de saúde. Ele não substitui a avaliação, diagnóstico ou orientação de um profissional de saúde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#explicacao_diagnostico_cardiaco",
+      "dialog_node": "node_6_1773677555289",
+      "previous_sibling": "node_9_1773679269705"
+    },
+    {
+      "type": "standard",
+      "title": "orientacao_emergencia_cardiaca",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "⚠️ Os sintomas que você mencionou podem indicar uma possível emergência cardíaca.\n\nSinais como dor forte no peito, falta de ar, sudorese intensa, tontura ou mal-estar repentino podem estar associados a problemas no coração e precisam de atenção imediata.\n\n🏥 Procure atendimento médico o mais rápido possível ou vá ao hospital mais próximo. Em situações cardíacas, o atendimento rápido pode fazer muita diferença no tratamento e na recuperação.\n\nℹ️ Importante: Este assistente tem como objetivo ajudar no entendimento de informações de saúde. Ele não substitui a avaliação ou o atendimento de um profissional de saúde, especialmente em casos de emergência."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#orientacao_emergencia_cardiaca",
+      "dialog_node": "node_6_1773679104356",
+      "previous_sibling": "node_8_1773676329450"
+    },
+    {
+      "type": "standard",
+      "title": "duvidas_pressao_arterial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A pressão arterial indica a força com que o sangue é bombeado pelo coração e circula pelas artérias do corpo.\n\nEla é medida por dois valores:\n\npressão sistólica (o número maior), que representa a pressão quando o coração se contrai\n\npressão diastólica (o número menor), que representa a pressão quando o coração relaxa entre os batimentos\n\nEm geral, um valor considerado normal é próximo de 12 por 8 (120/80 mmHg). No entanto, o valor ideal pode variar de pessoa para pessoa, dependendo de fatores como idade, histórico de saúde e orientação médica.\n\nQuando a pressão permanece frequentemente elevada, pode aumentar o risco de problemas cardiovasculares ao longo do tempo, por isso é importante acompanhar regularmente com um profissional de saúde.\n\nAlguns hábitos que podem ajudar no cuidado com a pressão arterial incluem:\n\nmanter uma alimentação equilibrada\n\npraticar atividade física regularmente\n\nreduzir o consumo de sal\n\ncontrolar o estresse\n\nevitar tabagismo e excesso de álcool"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#duvidas_pressao_arterial",
+      "dialog_node": "node_7_1773669984066",
+      "previous_sibling": "node_6_1773671589417"
+    },
+    {
+      "type": "standard",
+      "title": "colesterol_triglicerideos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O colesterol e os triglicerídeos são tipos de gordura presentes no sangue.\n\nNíveis elevados de colesterol podem aumentar o risco de doenças cardíacas.\n\nÉ importante manter uma alimentação equilibrada, praticar atividades físicas regularmente e seguir as orientações do seu médico.\n\nComo assistente de saúde, posso fornecer informações educativas e lembrar sobre hábitos saudáveis, mas não substituo o acompanhamento médico. Seu profissional de saúde pode recomendar exames periódicos e, se necessário, indicar tratamentos adequados."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#colesterol_triglicerideos",
+      "dialog_node": "node_7_1773708017858",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "informacoes_medicamentos_cardiacos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Medicamentos cardiovasculares são utilizados para ajudar no controle de problemas relacionados ao coração e à circulação sanguínea.\n\nEles podem ajudar a:\n\n💊 Controlar a pressão arterial\n❤️ Regular os batimentos do coração\n🛡️ Reduzir o risco de infarto, derrame e outras complicações cardiovasculares\n\nEm muitos casos, esses medicamentos fazem parte de um tratamento contínuo, ajudando a manter a saúde do coração e melhorar a qualidade de vida.\n\n⚠️ Importante: os medicamentos devem sempre ser utilizados com orientação médica. Apenas um profissional de saúde pode indicar qual remédio é adequado, a dose correta e por quanto tempo ele deve ser utilizado.\n\nEste assistente tem como objetivo ajudar no entendimento de informações de saúde, mas não substitui a avaliação de um médico."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#informacoes_medicamentos_cardiacos",
+      "dialog_node": "node_8_1773676329450",
+      "previous_sibling": "node_10_1773708667759"
+    },
+    {
+      "type": "standard",
+      "title": "encerramento_conversa",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Fico feliz em poder ajudar! 😊\n\nSe você tiver mais dúvidas sobre a saúde do coração, prevenção ou cuidados cardiovasculares, pode perguntar. Estou aqui para ajudar a entender melhor essas informações de forma simples e clara.\n\n❤️ Cuidar do coração é essencial para uma vida mais saudável."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#encerramento_conversa",
+      "dialog_node": "node_9_1773679269705",
+      "previous_sibling": "node_10_1773679240223"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "CardioIA_Chatbot-dialog"
+}
