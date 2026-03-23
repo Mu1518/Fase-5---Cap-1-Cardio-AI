@@ -74,6 +74,7 @@ Responsável pela interação com o usuário.
 Desenvolvida com HTML, CSS e JavaScript
 Interface de chat simples e intuitiva
 Permite envio e visualização de mensagens em tempo real
+
 🔹 Camada de Aplicação (Backend)
 
 Responsável pela comunicação entre usuário e inteligência artificial.
@@ -82,6 +83,7 @@ Desenvolvida em Python com Flask
 Gerencia requisições HTTP
 Controla sessões de conversa
 Realiza integração com a API do Watson Assistant
+
 🔹 Camada de Inteligência (IBM Watson Assistant)
 
 Responsável pelo processamento de linguagem natural.
