@@ -97,65 +97,17 @@ Execução do fluxo conversacional (dialog nodes)
 
 O fluxo conversacional do CardioAI foi projetado para simular um atendimento inicial em saúde cardiovascular, priorizando clareza, acessibilidade e naturalidade na interação com o usuário.
 
-A comunicação entre os componentes do sistema ocorre de forma sequencial e integrada:
+A comunicação entre os componentes ocorre de forma integrada: o usuário envia uma mensagem pela interface de chat, o frontend encaminha a requisição ao backend, que por sua vez aciona a API do IBM Watson Assistant. A mensagem é então processada com técnicas de NLP (Processamento de Linguagem Natural), gerando uma resposta que retorna ao backend e é exibida ao usuário em tempo real.
 
-O usuário envia uma mensagem pela interface de chat
-O frontend encaminha a requisição ao backend
-O backend aciona a API do IBM Watson Assistant
-O Watson processa a mensagem utilizando técnicas de NLP (Processamento de Linguagem Natural)
-A resposta é retornada ao backend
-O backend envia a resposta ao frontend
-O usuário visualiza a resposta no chat em tempo real
 🧠 Estrutura do Assistente
 
-O assistente foi modelado com base nos principais componentes do IBM Watson Assistant, responsáveis por garantir a inteligência e organização do diálogo:
+O assistente foi modelado com base nos principais componentes do Watson:
 
-🔹 Entities (Entidades)
+Entities (Entidades): responsáveis por identificar informações específicas nas mensagens, como valores de pressão arterial (ex: “12 por 8”, “14 por 9”), permitindo respostas mais contextualizadas.
+Dialog Nodes (Nós de Diálogo): estruturam o fluxo da conversa, incluindo boas-vindas, respostas informativas, orientações preventivas, identificação de possíveis riscos e tratamento de exceções (fallback).
+🔄 Funcionamento do Fluxo
 
-As entities permitem identificar informações específicas dentro das mensagens do usuário, tornando as respostas mais precisas e contextualizadas.
-
-Exemplo:
-
-Valores de pressão arterial:
-“12 por 8”
-“14 por 9”
-
-Essas informações são utilizadas para adaptar a resposta de acordo com o contexto clínico informado.
-
-🔹 Dialog Nodes (Nós de Diálogo)
-
-Os dialog nodes são responsáveis por estruturar o fluxo da conversa e definir o comportamento do assistente em diferentes cenários.
-
-Incluem:
-
-Início da conversa (boas-vindas)
-Respostas informativas sobre saúde cardiovascular
-Orientações preventivas
-Identificação de possíveis situações de risco
-Nó de fallback (quando o sistema não compreende a mensagem)
-🔄 Etapas do Fluxo Conversacional
-
-O funcionamento do assistente segue um fluxo estruturado em etapas:
-
-🟢 1. Início da Conversa
-
-O usuário inicia a interação com uma mensagem ou saudação.
-
-🟡 2. Interpretação (NLP)
-
-O sistema analisa a mensagem e identifica a intenção do usuário.
-
-🔵 3. Processamento
-
-As entidades são extraídas e o fluxo é direcionado para o nó de diálogo correspondente.
-
-🟣 4. Geração de Resposta
-
-O assistente retorna uma resposta clara, objetiva e educativa.
-
-🔴 5. Tratamento de Exceções
-
-Caso a mensagem não seja compreendida, o sistema ativa o fallback, solicitando que o usuário reformule a pergunta.
+O processo conversacional segue um ciclo contínuo: o usuário inicia a interação, o sistema interpreta a intenção da mensagem, extrai entidades relevantes e direciona o fluxo para o nó adequado, gerando uma resposta clara e educativa. Caso a mensagem não seja compreendida, o assistente solicita que o usuário reformule a pergunta, garantindo continuidade na conversa.
 
 ## 🤖 IA Generativa
 
@@ -181,20 +133,11 @@ Gerar respostas em formato JSON estruturado
 
 ## ▶️ Como Executar o Projeto
 
-- Clonar repositório
-git clone <URL_DO_REPOSITORIO>
-cd CardioAI
-
-- (Opcional) Criar ambiente virtual
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-- Instalar dependências
-pip install flask ibm-watson
-
-- Executar
-python chatbot.py
+1. Clone o repositório
+2. (Opcional) Crie um ambiente virtual
+3. Instale as dependências: pip install flask ibm-watson
+4. Execute: python chatbot.py
+5. Abra o index.html no navegador
 
 # 🎥 Vídeo de Demonstração
 
