@@ -93,23 +93,24 @@ Execução do fluxo conversacional (dialog nodes)
 
 ## 💬 Fluxo Conversacional
 
-O fluxo conversacional do CardioAI foi desenvolvido para simular um atendimento inicial em saúde cardiovascular, priorizando clareza e acessibilidade.
+O fluxo conversacional do CardioAI foi projetado para simular um atendimento inicial em saúde cardiovascular, priorizando clareza, acessibilidade e naturalidade na interação com o usuário.
 
-Usuário envia mensagem pela interface
-Frontend envia requisição para o backend
-Backend aciona a API do Watson Assistant
-O Watson processa a mensagem utilizando NLP
+A comunicação entre os componentes do sistema ocorre de forma sequencial e integrada:
+
+O usuário envia uma mensagem pela interface de chat
+O frontend encaminha a requisição ao backend
+O backend aciona a API do IBM Watson Assistant
+O Watson processa a mensagem utilizando técnicas de NLP (Processamento de Linguagem Natural)
 A resposta é retornada ao backend
-Backend envia a resposta ao frontend
-Usuário visualiza a resposta no chat
-
+O backend envia a resposta ao frontend
+O usuário visualiza a resposta no chat em tempo real
 🧠 Estrutura do Assistente
 
-O assistente foi modelado com base em três componentes principais:
+O assistente foi modelado com base nos principais componentes do IBM Watson Assistant, responsáveis por garantir a inteligência e organização do diálogo:
 
 🔹 Entities (Entidades)
 
-Identificam informações específicas dentro da mensagem.
+As entities permitem identificar informações específicas dentro das mensagens do usuário, tornando as respostas mais precisas e contextualizadas.
 
 Exemplo:
 
@@ -117,49 +118,52 @@ Valores de pressão arterial:
 “12 por 8”
 “14 por 9”
 
-Permitem respostas mais personalizadas e contextualizadas.
+Essas informações são utilizadas para adaptar a resposta de acordo com o contexto clínico informado.
 
 🔹 Dialog Nodes (Nós de Diálogo)
 
-Controlam o fluxo da conversa e definem as respostas.
+Os dialog nodes são responsáveis por estruturar o fluxo da conversa e definir o comportamento do assistente em diferentes cenários.
 
 Incluem:
 
-Início da conversa
-Respostas informativas
+Início da conversa (boas-vindas)
+Respostas informativas sobre saúde cardiovascular
 Orientações preventivas
-Identificação de possíveis riscos
-Fallback (quando o sistema não entende a mensagem)
+Identificação de possíveis situações de risco
+Nó de fallback (quando o sistema não compreende a mensagem)
+🔄 Etapas do Fluxo Conversacional
 
-🔄 Etapas do Fluxo
+O funcionamento do assistente segue um fluxo estruturado em etapas:
+
 🟢 1. Início da Conversa
 
 O usuário inicia a interação com uma mensagem ou saudação.
 
 🟡 2. Interpretação (NLP)
 
-O sistema analisa a mensagem e identifica a intenção.
+O sistema analisa a mensagem e identifica a intenção do usuário.
 
 🔵 3. Processamento
 
-O assistente verifica entidades e direciona para o fluxo adequado.
+As entidades são extraídas e o fluxo é direcionado para o nó de diálogo correspondente.
 
-🟣 4. Resposta
+🟣 4. Geração de Resposta
 
-O sistema retorna uma resposta clara, objetiva e educativa.
+O assistente retorna uma resposta clara, objetiva e educativa.
 
 🔴 5. Tratamento de Exceções
 
-Caso não compreenda a mensagem, o sistema solicita reformulação (fallback).
+Caso a mensagem não seja compreendida, o sistema ativa o fallback, solicitando que o usuário reformule a pergunta.
 
 ## 🤖 IA Generativa
 
-O CardioAI também utiliza IA Generativa para:
+O CardioAI também utiliza recursos de IA Generativa para enriquecer o processamento das informações e melhorar a qualidade das respostas.
 
+🔍 Aplicações da IA Generativa
 Interpretar texto clínico não estruturado
-Extrair informações relevantes
-Organizar dados do paciente
-Gerar resposta estruturada em JSON
+Extrair informações relevantes da mensagem do usuário
+Organizar dados do paciente de forma estruturada
+Gerar respostas em formato JSON estruturado
 
 ## 📁 Estrutura das Pastas
 
