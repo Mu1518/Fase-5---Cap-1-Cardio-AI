@@ -143,13 +143,12 @@ Gerar respostas em formato JSON estruturado
 
 Confira abaixo a demonstração do funcionamento do CardioAI:
 
-[!https://youtu.be/D_Wn9Dib5xM]
+[https://youtu.be/D_Wn9Dib5xM]
 
 
 ## 🗃 Histórico de lançamentos
 
 * 1.0.0 - 23/03/2026
-    
 
 ## 📋 Licença
 
