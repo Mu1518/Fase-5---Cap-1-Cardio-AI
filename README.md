@@ -143,7 +143,7 @@ Gerar respostas em formato JSON estruturado
 
 Confira abaixo a demonstração do funcionamento do CardioAI:
 
-[![Assistir vídeo]
+[!https://youtu.be/D_Wn9Dib5xM]
 
 
 ## 🗃 Histórico de lançamentos
