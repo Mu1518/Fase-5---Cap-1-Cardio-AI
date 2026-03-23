@@ -63,9 +63,94 @@ Desenvolver um Assistente Cardiológico Inteligente capaz de:
 
 ## 🧩 ARQUITETURA DA SOLUÇÃO
 
+A arquitetura do CardioAI foi projetada de forma modular, permitindo integração eficiente entre interface, backend e serviços de inteligência artificial.
+
+O sistema é dividido em três camadas principais:
+
+🔹 Camada de Interface (Frontend)
+
+Responsável pela interação com o usuário.
+
+Desenvolvida com HTML, CSS e JavaScript
+Interface de chat simples e intuitiva
+Permite envio e visualização de mensagens em tempo real
+🔹 Camada de Aplicação (Backend)
+
+Responsável pela comunicação entre usuário e inteligência artificial.
+
+Desenvolvida em Python com Flask
+Gerencia requisições HTTP
+Controla sessões de conversa
+Realiza integração com a API do Watson Assistant
+🔹 Camada de Inteligência (IBM Watson Assistant)
+
+Responsável pelo processamento de linguagem natural.
+
+Interpretação das mensagens do usuário (NLP)
+Identificação de intenções (intents)
+Extração de entidades (entities)
+Execução do fluxo conversacional (dialog nodes)
 
 ## 💬 Fluxo Conversacional
 
+O fluxo conversacional do CardioAI foi desenvolvido para simular um atendimento inicial em saúde cardiovascular, priorizando clareza e acessibilidade.
+
+Usuário envia mensagem pela interface
+Frontend envia requisição para o backend
+Backend aciona a API do Watson Assistant
+O Watson processa a mensagem utilizando NLP
+A resposta é retornada ao backend
+Backend envia a resposta ao frontend
+Usuário visualiza a resposta no chat
+
+🧠 Estrutura do Assistente
+
+O assistente foi modelado com base em três componentes principais:
+
+🔹 Entities (Entidades)
+
+Identificam informações específicas dentro da mensagem.
+
+Exemplo:
+
+Valores de pressão arterial:
+“12 por 8”
+“14 por 9”
+
+Permitem respostas mais personalizadas e contextualizadas.
+
+🔹 Dialog Nodes (Nós de Diálogo)
+
+Controlam o fluxo da conversa e definem as respostas.
+
+Incluem:
+
+Início da conversa
+Respostas informativas
+Orientações preventivas
+Identificação de possíveis riscos
+Fallback (quando o sistema não entende a mensagem)
+
+🔄 Etapas do Fluxo
+🟢 1. Início da Conversa
+
+O usuário inicia a interação com uma mensagem ou saudação.
+
+🟡 2. Interpretação (NLP)
+
+O sistema analisa a mensagem e identifica a intenção.
+
+🔵 3. Processamento
+
+O assistente verifica entidades e direciona para o fluxo adequado.
+
+🟣 4. Resposta
+
+O sistema retorna uma resposta clara, objetiva e educativa.
+
+🔴 5. Tratamento de Exceções
+
+Caso não compreenda a mensagem, o sistema solicita reformulação (fallback).
 
 ## 🤖 IA Generativa
 
