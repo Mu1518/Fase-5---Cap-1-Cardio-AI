@@ -8,7 +8,7 @@
 
 # PROJETO - Cardio AI
 
-![capa]
+![capa](https://github.com/Mu1518/Fase-5---Cap-1-Cardio-AI/blob/main/assets/capa.png)
 
 ## Grupo 20
 
