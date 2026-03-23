@@ -167,11 +167,15 @@ Gerar respostas em formato JSON estruturado
 
 ## 📁 Estrutura das Pastas
 
-- <b>assets</b>: imagens utilizadas no projeto e documentação
-  
-- <b>docs</b>: documentos prinicpais
+- assets/ → imagens do projeto
+- docs/ → documentação principal
+- chatbot.py → integração com o Watson Assistant
+- CardioIA_Chatbot-dialog.json → configuração do assistente (intents, entities, diálogos)
+- index.html → interface do chatbot
+- Relatório do Assistente Cardiológico Conversacional.pdf → documentação detalhada
+- .gitignore → controle de versionamento
+- README.md → guia do projeto
 
-- <b>README.md</b>: guia e explicação geral sobre o projeto
 
 ## ▶️ Como Executar o Projeto
 
