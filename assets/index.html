@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CardioIA - Assistente Cardiológico</title>
+  <!-- FONTES MAIS ELEGANTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #d9dbe0; /* fundo cinza suave */
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* ===== CABEÇALHO ===== */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: linear-gradient(90deg, #b71c1c, #e53935);
+      padding: 20px 0;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    header img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-right: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* ===== CARDS INFORMATIVOS ===== */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 10px 20px 10px;
+      max-width: 1000px;
+    }
+    .card {
+      background: #d9dbe0; /* cinza suave nos cards */
+      padding: 20px;
+      border-radius: 15px;
+      width: 250px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      font-family: 'Poppins', sans-serif;
+      color: #b71c1c;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .card p { font-size: 14px; color: #444; }
+
+    /* ===== CHAT ===== */
+    #chat-container {
+      width: 400px;
+      height: 550px;
+      border-radius: 25px;
+      overflow: hidden;
+      background: #eceff3; /* fundo do chat mais cinza */
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      border: 1px solid rgba(0,0,0,0.05);
+      margin: 30px 0;
+      transition: all 0.3s ease;
+    }
+    #chat-container:hover {
+      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+      transform: translateY(-3px);
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding: 15px 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+      background: #d9dbe0;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media (max-width: 900px) { .cards { flex-direction: column; align-items: center; } }
+    @media (max-width: 450px) {
+      header h1 { font-size: 22px; }
+      header img { width: 50px; height: 50px; }
+      #chat-container { width: 90%; height: 500px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <img src="drRay.png" alt="Dr. Feitp">
+    <h1>CardioIA - Assistente Cardiológico</h1>
+  </header>
+
+  <!-- CARDS DE INFORMAÇÃO -->
+  <div class="cards">
+    <div class="card">
+      <h3>Monitoramento de Batimentos</h3>
+      <p>Analise sua frequência cardíaca em tempo real e receba orientações sobre saúde do coração.</p>
+    </div>
+    <div class="card">
+      <h3>Dicas de Saúde</h3>
+      <p>Receba recomendações confiáveis para manter hábitos saudáveis e prevenir doenças cardiovasculares.</p>
+    </div>
+    <div class="card">
+      <h3>Alertas Personalizados</h3>
+      <p>Detecte sinais de alerta no seu coração e saiba quando procurar ajuda médica imediatamente.</p>
+    </div>
+  </div>
+
+  <!-- CHAT -->
+  <div id="chat-container"></div>
+
+  <!-- SCRIPT DO WATSON -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "c6d6bf82-0300-4e5a-aaf4-ba1387b22166",
+      region: "us-south",
+      serviceInstanceID: "19dffdc9-9c3e-42c4-a028-98e0329ab61b",
+      onLoad: async (instance) => { await instance.render(); },
+      element: document.getElementById("chat-container")
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/"
+              + (window.watsonAssistantChatOptions.clientVersion || 'latest')
+              + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+  <!-- RODAPÉ -->
+  <footer>
+    &copy; 2026 CardioIA. Informações educativas sobre saúde cardiovascular.
+  </footer>
+
+</body>
+</html>
